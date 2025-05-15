@@ -1,0 +1,6 @@
+tweet_id,username,display_name,text,image_url,sentiment,timestamp
+123456,alice,Dr. Alice,"Excited about AI breakthroughs!","https://pbs.twimg.com/media/ai1.jpg",positive,2025-04-01 10:00:00
+123457,bob,Bob Smith,"Not sure how I feel about the new tech update.","https://pbs.twimg.com/media/tech2.jpg",neutral,2025-04-01 11:00:00
+123458,charlie,Charlie,"This is terrible news for the environment.","https://pbs.twimg.com/media/env3.jpg",negative,2025-04-01 12:00:00
+123459,diana,Diana,"Loving the new features in the latest phone!","https://pbs.twimg.com/media/phone4.jpg",positive,2025-04-01 13:00:00
+123460,eric,Eric,"The concert last night was unforgettable.","https://pbs.twimg.com/media/music5.jpg",positive,2025-04-01 14:00:00
