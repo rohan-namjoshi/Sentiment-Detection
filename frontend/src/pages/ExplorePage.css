@@ -1,0 +1,249 @@
+.explore-page {
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #14171a;
+}
+
+.search-container {
+  margin-bottom: 24px;
+}
+
+.explore-content {
+  display: flex;
+  position: relative;
+}
+
+.explore-main {
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.categories-container {
+  margin-bottom: 24px;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.category-item {
+  background-color: #eef8ff;
+  color: #1da1f2;
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.category-item:hover {
+  background-color: #d7eeff;
+}
+
+.category-item.active {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.category-content {
+  margin-top: 24px;
+}
+
+.explore-prompt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #657786;
+  text-align: center;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.explore-page-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-sidebar {
+  width: 20%;
+  min-width: 250px;
+  margin-right: 20px;
+  transition: box-shadow 0.2s;
+}
+.left-sidebar:hover {
+  box-shadow: 0 2px 16px rgba(29,161,242,0.08);
+}
+
+
+.main-content {
+  margin-left: 250px;
+
+  flex: 1;
+  max-width: 600px;
+  animation: fadeInMain 0.7s;
+}
+
+@keyframes fadeInMain {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.right-sidebar {
+  width: 25%;
+  min-width: 300px;
+  margin-left: 20px;
+  transition: box-shadow 0.2s;
+}
+.right-sidebar:hover {
+  box-shadow: 0 2px 16px rgba(29,161,242,0.08);
+}
+
+
+.featured-categories {
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.featured-categories h3 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.categories-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-item {
+  flex: 1 1 calc(50% - 10px);
+  min-width: 100px;
+  padding: 10px;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(.4,2,.6,1), box-shadow 0.22s;
+  transform: scale(1);
+  box-shadow: 0 0 0 rgba(29,161,242,0.07);
+}
+
+.category-item:hover {
+  background-color: var(--hover-color);
+  border-color: var(--primary-color);
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 6px 24px rgba(29,161,242,0.10);
+}
+
+.category-item.selected {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  transform: scale(1.08);
+  box-shadow: 0 8px 32px rgba(29,161,242,0.18);
+}
+
+
+.category-item span {
+  font-size: 0.9rem;
+}
+
+.no-selection {
+  padding: 30px;
+  text-align: center;
+}
+
+.no-selection h2 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+/* Analysis sidebar styling */
+.analysis-sidebar {
+  width: 350px;
+  position: relative;
+  right: -350px;
+  margin-left: 20px;
+  transition: right 0.3s ease-in-out;
+  opacity: 0;
+  animation: slide-in 0.3s forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    right: -350px;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .explore-content {
+    flex-direction: column;
+  }
+  
+  .analysis-sidebar {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+    position: static;
+    animation: fade-in 0.3s forwards;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .explore-page-container {
+    padding: 10px;
+  }
+
+  .left-sidebar, .right-sidebar {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .explore-page-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-sidebar, .main-content, .right-sidebar {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 0 20px 0;
+  }
+}

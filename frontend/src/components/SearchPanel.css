@@ -1,0 +1,44 @@
+.search-panel {
+  margin-bottom: 20px;
+}
+
+.search-type {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.search-option {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-option input {
+  display: none;
+}
+
+.search-option span {
+  font-weight: 500;
+}
+
+.search-option.active {
+  background-color: #e8f5fe;
+  color: #1da1f2;
+}
+
+.search-input-container {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.search-input {
+  flex: 1;
+  margin-right: 8px;
+}
+
+.search-button {
+  min-width: 80px;
+}

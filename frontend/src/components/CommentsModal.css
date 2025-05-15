@@ -1,0 +1,66 @@
+.comments-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comments-modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  max-width: 500px;
+  width: 95vw;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.16);
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.comments-list {
+  margin-bottom: 16px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.comment-item {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.98rem;
+}
+.analyze-btn {
+  margin: 10px 0 16px 0;
+  padding: 8px 18px;
+  background: #36a2eb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.analyze-btn:disabled {
+  background: #b3c6db;
+  cursor: not-allowed;
+}
+.sentiment-chart-container {
+  margin-top: 12px;
+  text-align: center;
+}
+.sentiment-majority {
+  margin-top: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.sentiment-error {
+  color: #d32f2f;
+  margin-top: 8px;
+}
